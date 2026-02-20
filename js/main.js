@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Service Interest: ' + entries.service + '\n\n' +
         entries.message
       );
-      window.location.href = 'mailto:jerry.lambert@smarterdev.com?subject=' + subject + '&body=' + body;
+      window.location.href = 'mailto:info@smarterdev.ai?subject=' + subject + '&body=' + body;
     });
   }
 });
