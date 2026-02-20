@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const entries = Object.fromEntries(data.entries());
 
       // Build mailto
-      const subject = encodeURIComponent('Angent Inquiry: ' + (entries.service || 'General'));
+      const subject = encodeURIComponent('SmarterDev Inquiry: ' + (entries.service || 'General'));
       const body = encodeURIComponent(
         'Name: ' + entries.name + '\n' +
         'Company: ' + entries.company + '\n' +
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Service Interest: ' + entries.service + '\n\n' +
         entries.message
       );
-      window.location.href = 'mailto:info@angent.com?subject=' + subject + '&body=' + body;
+      window.location.href = 'mailto:jerry.lambert@smarterdev.com?subject=' + subject + '&body=' + body;
     });
   }
 });
