@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>By The Numbers | SmarterDev.ai</title>
+  <meta name="description" content="Nine public-safe first-party street prices from the 27 August 2026 haul. Dated. Sourced. Quiet if a host failed.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #FBF8F0; }
+  body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 8.4pt;
+    line-height: 1.28;
+    color: #1C2135;
+    background: #FBF8F0;
+  }
+
+  .mast {
+    display: table;
+    width: 100%;
+    margin: 0 0 6pt 0;
+    padding: 0 0 6pt 0;
+    border-bottom: 2.5pt solid #C4A35A;
+  }
+  .mast-mark {
+    display: table-cell;
+    width: 34pt;
+    vertical-align: middle;
+  }
+  .mark {
+    width: 28pt;
+    height: 28pt;
+    background: #0A1F44;
+    color: #C4A35A;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: 700;
+    font-size: 16pt;
+    line-height: 28pt;
+    text-align: center;
+  }
+  .mast-copy {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 10pt;
+  }
+  .house {
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    font-size: 7.5pt;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #C4A35A;
+    margin: 0 0 1pt 0;
+  }
+  .mast h1 {
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    font-size: 17.5pt;
+    font-weight: 700;
+    color: #0A1F44;
+    margin: 0;
+    line-height: 1.1;
+    border: 0;
+    padding: 0;
+  }
+  .mast .sub {
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    color: #5C6480;
+    margin: 2pt 0 0 0;
+  }
+  .mast-meta {
+    display: table-cell;
+    width: 38%;
+    vertical-align: middle;
+    text-align: right;
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    font-size: 7.5pt;
+    color: #5C6480;
+    line-height: 1.35;
+  }
+  .mast-meta strong {
+    display: block;
+    color: #0A1F44;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 8pt;
+  }
+
+  .stamp {
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    border: 1.75pt solid #C4A35A;
+    background: #F4EBCF;
+    color: #0A1F44;
+    padding: 4.5pt 8pt;
+    margin: 0 0 6pt 0;
+  }
+  .stamp .banner {
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 0 0 2pt 0;
+    color: #0A1F44;
+  }
+  .stamp p { margin: 0; font-size: 8pt; color: #1C2135; line-height: 1.3; }
+
+  .key {
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    font-size: 7.4pt;
+    color: #5C6480;
+    margin: 0 0 6pt 0;
+    line-height: 1.32;
+  }
+
+  table.ref {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    background: #FFFdf8;
+    page-break-inside: auto;
+  }
+  table.ref thead { display: table-header-group; }
+  table.ref th {
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    font-size: 6.6pt;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #0A1F44;
+    text-align: left;
+    vertical-align: bottom;
+    padding: 3pt 4pt 4pt 4pt;
+    border-bottom: 1.5pt solid #C4A35A;
+    background: #F4EBCF;
+  }
+  table.ref td {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 7.8pt;
+    color: #1C2135;
+    vertical-align: top;
+    padding: 4.6pt 4pt 4.6pt 4pt;
+    border-bottom: 0.4pt solid #D8D0BC;
+    page-break-inside: avoid;
+  }
+  table.ref tbody tr { page-break-inside: avoid; }
+  table.ref tbody tr:last-child td { border-bottom: 1.25pt solid #0A1F44; }
+
+  col.signal { width: 15.2%; }
+  col.figure { width: 17.2%; }
+  col.also { width: 20.5%; }
+  col.clock { width: 18.2%; }
+  col.source { width: 20.2%; }
+  col.status { width: 8.7%; }
+
+  .cat {
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    font-size: 6.4pt;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #C4A35A;
+    margin: 0 0 1pt 0;
+  }
+  .name {
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    font-weight: 700;
+    color: #0A1F44;
+    line-height: 1.18;
+    margin: 0;
+  }
+
+  .fig {
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    font-size: 12.4pt;
+    font-weight: 700;
+    color: #0A1F44;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    margin: 0 0 1.5pt 0;
+    white-space: nowrap;
+  }
+  .unit {
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    font-size: 6.5pt;
+    color: #5C6480;
+    line-height: 1.25;
+    margin: 0;
+  }
+  .note {
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    font-size: 6.6pt;
+    color: #5C6480;
+    line-height: 1.28;
+    margin: 2pt 0 0 0;
+  }
+
+  .also-main {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 8.2pt;
+    color: #1C2135;
+    margin: 0;
+  }
+  .also-main strong {
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    font-size: 8.6pt;
+    font-weight: 700;
+    color: #0A1F44;
+  }
+
+  .clock-main {
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    font-size: 7.6pt;
+    color: #1C2135;
+    margin: 0;
+  }
+
+  .host {
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    font-size: 7pt;
+    font-weight: 700;
+    color: #0A1F44;
+    margin: 0 0 1pt 0;
+  }
+  .url {
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    font-size: 6.1pt;
+    color: #5C6480;
+    line-height: 1.28;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+    margin: 0;
+  }
+  .url a { color: #5C6480; text-decoration: none; }
+  .asof {
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    font-size: 6.2pt;
+    color: #5C6480;
+    margin: 2pt 0 0 0;
+  }
+
+  .st {
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    font-size: 6.4pt;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #0A1F44;
+    border: 0.75pt solid #0A1F44;
+    padding: 1.5pt 3pt;
+    display: inline-block;
+    line-height: 1.2;
+  }
+
+  .honesty {
+    margin: 4pt 0 0 0;
+    padding: 10pt 9pt 9pt 9pt;
+    background: #FFFdf8;
+    border-top: 2.5pt solid #C4A35A;
+    border-bottom: 1.25pt solid #0A1F44;
+    page-break-inside: avoid;
+  }
+  .honesty h2 {
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    font-weight: 700;
+    color: #0A1F44;
+    margin: 0 0 3pt 0;
+    padding: 0;
+    border: 0;
+  }
+  .honesty .rule {
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    font-size: 7.6pt;
+    color: #5C6480;
+    margin: 0 0 7pt 0;
+  }
+  table.chips {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 8pt 0;
+  }
+  table.chips td {
+    width: 33.33%;
+    vertical-align: top;
+    padding: 0 6pt 0 0;
+  }
+  table.chips td:last-child { padding-right: 0; }
+  .chip {
+    border: 0.85pt solid #0A1F44;
+    padding: 5.5pt 6pt;
+  }
+  .chip.fail { border-color: #7A1F1F; }
+  .chip.unv { border-color: #5C6480; }
+  .chip .lab {
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    font-size: 6.4pt;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 0 0 1pt 0;
+  }
+  .chip.ok .lab { color: #0A1F44; }
+  .chip.fail .lab { color: #7A1F1F; }
+  .chip.unv .lab { color: #5C6480; }
+  .chip .val {
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    font-weight: 700;
+    color: #0A1F44;
+    margin: 0;
+  }
+  .chip.fail .val { color: #7A1F1F; }
+  .chip.unv .val { color: #5C6480; }
+  .chip .sub {
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    font-size: 6.6pt;
+    color: #5C6480;
+    margin: 1pt 0 0 0;
+    line-height: 1.25;
+  }
+
+  .failbox {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .failbox td {
+    width: 33.33%;
+    vertical-align: top;
+    padding: 0 8pt 0 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 7.6pt;
+    color: #1C2135;
+    line-height: 1.3;
+  }
+  .failbox td:last-child { padding-right: 0; }
+  .failbox .who {
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    font-size: 7.4pt;
+    font-weight: 700;
+    color: #7A1F1F;
+    margin: 0 0 1pt 0;
+  }
+  .failbox .why { margin: 0; }
+  .failbox .src {
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    font-size: 6.2pt;
+    color: #5C6480;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+    margin: 2pt 0 0 0;
+  }
+  .failbox a { color: #5C6480; text-decoration: none; }
+
+  .method {
+    margin: 9pt 0 0 0;
+    page-break-inside: avoid;
+  }
+  .method h2 {
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: #0A1F44;
+    margin: 0 0 3pt 0;
+    padding: 0 0 2pt 0;
+    border-bottom: 1pt solid #C4A35A;
+  }
+  .method p {
+    font-size: 8pt;
+    color: #1C2135;
+    margin: 0 0 4pt 0;
+  }
+
+  body.btn-page { padding-top: 72px; }
+  .btn-wrap { max-width: 1120px; margin: 0 auto; padding: 28px 20px 48px; }
+  .stamp.live {
+    border: 1.75pt solid #C4A35A;
+    background: #F4EBCF;
+  }
+  .stamp.live .banner { letter-spacing: 0.08em; }
+  @media (max-width: 800px) {
+    table.ref { display: block; overflow-x: auto; }
+    .fig { white-space: normal; }
+  }
+</style>
+</head>
+<body class="btn-page">
+
+  <nav class="nav scrolled">
+    <div class="container">
+      <a href="../index.html" class="nav-logo">SMARTER<span>DEV</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html#practices">Practices</a></li>
+        <li><a href="../index.html#results">Track Record</a></li>
+        <li><a href="../index.html#industries">Industries</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="/by-the-numbers/" class="active">By The Numbers</a></li>
+        <li><a href="../articles.html">Articles</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Schedule a Briefing</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="btn-wrap">
+<div class="mast">
+  <div class="mast-mark"><div class="mark">U</div></div>
+  <div class="mast-copy">
+    <p class="house">SmarterDev.ai</p>
+    <h1>By The Numbers</h1>
+    <p class="sub">AgentU · Govern the AI Workforce</p>
+  </div>
+  <div class="mast-meta">
+    <strong>27 August 2026</strong>
+    America/Chicago<br>
+    Haul about 6:41pm CT
+  </div>
+</div>
+
+<div class="stamp live">
+  <p class="banner">First-party street prices</p>
+  <p>Dated. Sourced. Quiet if a host failed.</p>
+</div>
+
+<p class="key">Nine public-safe signals from the 27 August 2026 haul. The figure is the street or clock number that matters. Also read as restates the same claim in a second unit we already have. Status is the confidence. Dollars are input / output per 1M tokens unless a row says otherwise.</p>
+
+<table class="ref">
+  <colgroup>
+    <col class="signal">
+    <col class="figure">
+    <col class="also">
+    <col class="clock">
+    <col class="source">
+    <col class="status">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Signal</th>
+      <th>Figure</th>
+      <th>Also read as</th>
+      <th>Clock</th>
+      <th>Source</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>
+        <p class="cat">Street vs book</p>
+        <p class="name">GPT-5.6 Sol</p>
+      </td>
+      <td>
+        <p class="fig">$4 / $20</p>
+        <p class="unit">per 1M · short context · street</p>
+        <p class="note">Long context $8 / $30. Cached $0.40. Alias gpt-5.6 routes to sol.</p>
+      </td>
+      <td>
+        <p class="also-main">Book <strong>$5 / $30</strong></p>
+        <p class="note">Street is under the listed book on short context.</p>
+      </td>
+      <td>
+        <p class="clock-main">Promo at least through 2026-11-21</p>
+      </td>
+      <td>
+        <p class="host">OpenAI</p>
+        <p class="url"><a href="https://developers.openai.com/api/docs/pricing">developers.openai.com/api/docs/pricing</a></p>
+        <p class="url"><a href="https://developers.openai.com/api/docs/changelog">developers.openai.com/api/docs/changelog</a> (21 Aug 2026)</p>
+        <p class="asof">As of 27 Aug 2026</p>
+      </td>
+      <td><span class="st">Verified</span></td>
+    </tr>
+
+    <tr>
+      <td>
+        <p class="cat">Street vs book</p>
+        <p class="name">Claude Sonnet 5</p>
+      </td>
+      <td>
+        <p class="fig">$2 / $10</p>
+        <p class="unit">per 1M · now the standard</p>
+      </td>
+      <td>
+        <p class="also-main">Book <strong>$3 / $15</strong></p>
+        <p class="note">Hike cancelled. The 2026-09-01 move will not occur.</p>
+      </td>
+      <td>
+        <p class="clock-main">2026-09-01 hike will not occur</p>
+      </td>
+      <td>
+        <p class="host">Anthropic</p>
+        <p class="url"><a href="https://platform.claude.com/docs/en/about-claude/pricing">platform.claude.com/docs/en/about-claude/pricing</a></p>
+        <p class="asof">As of 27 Aug 2026</p>
+      </td>
+      <td><span class="st">Verified</span></td>
+    </tr>
+
+    <tr>
+      <td>
+        <p class="cat">Two SKUs, one family</p>
+        <p class="name">Opus 5 / Fable 5</p>
+      </td>
+      <td>
+        <p class="fig">$5 / $25</p>
+        <p class="unit">per 1M · Opus 5</p>
+        <p class="note">Cache hit $0.50. Fast mode $10 / $50 is a 2x chip, not the default.</p>
+      </td>
+      <td>
+        <p class="also-main">Fable 5 <strong>$10 / $50</strong></p>
+        <p class="note">Same list as Mythos 5, limited. Do not alias Fable onto Opus.</p>
+      </td>
+      <td>
+        <p class="clock-main">No sunset named this haul</p>
+      </td>
+      <td>
+        <p class="host">Anthropic</p>
+        <p class="url"><a href="https://platform.claude.com/docs/en/about-claude/pricing">platform.claude.com/docs/en/about-claude/pricing</a></p>
+        <p class="asof">As of 27 Aug 2026</p>
+      </td>
+      <td><span class="st">Verified</span></td>
+    </tr>
+
+    <tr>
+      <td>
+        <p class="cat">New on allowlist</p>
+        <p class="name">GLM-5.3</p>
+      </td>
+      <td>
+        <p class="fig">$1.4 / $4.4</p>
+        <p class="unit">per 1M · flagship glm-5.3</p>
+        <p class="note">Text-only. 1M context.</p>
+      </td>
+      <td>
+        <p class="also-main">Cached <strong>$0.26</strong></p>
+        <p class="note">Book still lists glm-5.2 / glm-5.1 at the same $1.4 / $4.4.</p>
+      </td>
+      <td>
+        <p class="clock-main">Flash promo through 2026-09-09 24:00 UTC+8</p>
+        <p class="note">glm-5.3-flash $0.075 / $0.25. Footnote only. Not a peer bar.</p>
+      </td>
+      <td>
+        <p class="host">Z.AI</p>
+        <p class="url"><a href="https://docs.z.ai/guides/overview/pricing">docs.z.ai/guides/overview/pricing</a></p>
+        <p class="url"><a href="https://docs.z.ai/guides/llm/glm-5.3">docs.z.ai/guides/llm/glm-5.3</a></p>
+        <p class="asof">As of 27 Aug 2026</p>
+      </td>
+      <td><span class="st">Verified</span></td>
+    </tr>
+
+    <tr>
+      <td>
+        <p class="cat">New on allowlist</p>
+        <p class="name">Qwen 3.8 Max</p>
+      </td>
+      <td>
+        <p class="fig">$2 / $6</p>
+        <p class="unit">per 1M · Singapore International · qwen3.8-max</p>
+      </td>
+      <td>
+        <p class="also-main">Other listed regions <strong>$1.65 / $4.951</strong></p>
+        <p class="note">Sibling billed id qwen3.8-2.4t-a95b. Same Singapore $2 / $6. 1M context.</p>
+      </td>
+      <td>
+        <p class="clock-main">Book still Qwen 3.7</p>
+      </td>
+      <td>
+        <p class="host">Alibaba Cloud</p>
+        <p class="url"><a href="https://www.alibabacloud.com/help/en/model-studio/qwen3-8-max">alibabacloud.com/help/en/model-studio/qwen3-8-max</a></p>
+        <p class="url"><a href="https://www.alibabacloud.com/help/en/model-studio/qwen3-8-2-4t-a95b">alibabacloud.com/help/en/model-studio/qwen3-8-2-4t-a95b</a></p>
+        <p class="asof">As of 27 Aug 2026</p>
+      </td>
+      <td><span class="st">Verified</span></td>
+    </tr>
+
+    <tr>
+      <td>
+        <p class="cat">Sunset clocks</p>
+        <p class="name">Nova Premier</p>
+      </td>
+      <td>
+        <p class="fig">14 Sep 2026</p>
+        <p class="unit">EOL · 18 days from this haul</p>
+      </td>
+      <td>
+        <p class="also-main">Perplexity Sonar until <strong>27 Sep 2026</strong></p>
+        <p class="note">31 days. Successor Agent API.</p>
+      </td>
+      <td>
+        <p class="clock-main">18 days · 31 days</p>
+      </td>
+      <td>
+        <p class="host">Amazon Bedrock · Perplexity</p>
+        <p class="url"><a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html">docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html</a></p>
+        <p class="url"><a href="https://docs.perplexity.ai/docs/getting-started/pricing">docs.perplexity.ai/docs/getting-started/pricing</a></p>
+        <p class="asof">As of 27 Aug 2026</p>
+      </td>
+      <td><span class="st">Verified</span></td>
+    </tr>
+
+    <tr>
+      <td>
+        <p class="cat">Length cliff</p>
+        <p class="name">grok-4.6</p>
+      </td>
+      <td>
+        <p class="fig">$2 / $6</p>
+        <p class="unit">per 1M · prompt under 200k</p>
+        <p class="note">Cached $0.50 under the cliff.</p>
+      </td>
+      <td>
+        <p class="also-main">At or above 200k <strong>$4 / $12</strong></p>
+        <p class="note">Applies to all tokens once the prompt is at or above 200k.</p>
+      </td>
+      <td>
+        <p class="clock-main">Cliff at 200k prompt</p>
+        <p class="note">Book newest listed grok is 4.5.</p>
+      </td>
+      <td>
+        <p class="host">xAI</p>
+        <p class="url"><a href="https://docs.x.ai/developers/models/grok-4.6">docs.x.ai/developers/models/grok-4.6</a></p>
+        <p class="asof">As of 27 Aug 2026</p>
+      </td>
+      <td><span class="st">Verified</span></td>
+    </tr>
+
+    <tr>
+      <td>
+        <p class="cat">Weekday clock</p>
+        <p class="name">DeepSeek V4-Pro</p>
+      </td>
+      <td>
+        <p class="fig">$1.32 / $3.96</p>
+        <p class="unit">per 1M · peak · cache-miss</p>
+      </td>
+      <td>
+        <p class="also-main">Off-peak <strong>$0.66 / $1.98</strong></p>
+        <p class="note">Half of peak.</p>
+      </td>
+      <td>
+        <p class="clock-main">Peak UTC Mon-Fri 01:00-04:00 and 06:00-10:00</p>
+        <p class="note">All other hours off-peak, weekends included. CT this date (UTC-5): 8:00pm-11:00pm Sun-Thu and 1:00am-5:00am Mon-Fri.</p>
+      </td>
+      <td>
+        <p class="host">DeepSeek</p>
+        <p class="url"><a href="https://api-docs.deepseek.com/quick_start/pricing">api-docs.deepseek.com/quick_start/pricing</a></p>
+        <p class="asof">As of 27 Aug 2026</p>
+      </td>
+      <td><span class="st">Verified</span></td>
+    </tr>
+
+    <tr>
+      <td>
+        <p class="cat">Permanent discount</p>
+        <p class="name">MiniMax-M3</p>
+      </td>
+      <td>
+        <p class="fig">$0.30 / $1.20</p>
+        <p class="unit">per 1M · at or under 512k · permanent 50% off</p>
+        <p class="note">Cache-read $0.06.</p>
+      </td>
+      <td>
+        <p class="also-main">Above 512k <strong>$0.60 / $2.40</strong></p>
+      </td>
+      <td>
+        <p class="clock-main">Permanent. No end date named.</p>
+      </td>
+      <td>
+        <p class="host">MiniMax</p>
+        <p class="url"><a href="https://platform.minimax.io/docs/guides/pricing-paygo">platform.minimax.io/docs/guides/pricing-paygo</a></p>
+        <p class="asof">As of 27 Aug 2026</p>
+      </td>
+      <td><span class="st">Verified</span></td>
+    </tr>
+
+  </tbody>
+</table>
+
+<div class="honesty">
+  <h2>Honesty strip</h2>
+  <p class="rule">Failed this haul is not no-change. Never fill a failed chip with a third-party number. No Gemini dollar. No Meta dollar. No MAI dollar.</p>
+
+  <table class="chips">
+    <tr>
+      <td>
+        <div class="chip ok">
+          <p class="lab">Fetched</p>
+          <p class="val">9 signals</p>
+          <p class="sub">First-party host returned the figure on this haul.</p>
+        </div>
+      </td>
+      <td>
+        <div class="chip fail">
+          <p class="lab">Failed</p>
+          <p class="val">Google · Meta · Microsoft</p>
+          <p class="sub">Host timed out, errored, or returned 404.</p>
+        </div>
+      </td>
+      <td>
+        <div class="chip unv">
+          <p class="lab">Unverified</p>
+          <p class="val">Gemini 3.1 Flash · Muse Spark $</p>
+          <p class="sub">Names may exist. Dollars are withheld.</p>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <table class="failbox">
+    <tr>
+      <td>
+        <p class="who">Google. Failed.</p>
+        <p class="why">Pricing page timed out. Gemini 3.1 Flash is UNVERIFIED.</p>
+        <p class="src"><a href="https://ai.google.dev/gemini-api/docs/pricing">ai.google.dev/gemini-api/docs/pricing</a></p>
+      </td>
+      <td>
+        <p class="who">Meta. Failed.</p>
+        <p class="why">Pricing-rate-limits failed. Muse Spark Standard $ retracted. Landing names 1.1 / 1.2 only. No Meta dollar.</p>
+        <p class="src"><a href="https://llama.developer.meta.com/docs/getting-started/pricing-rate-limits">llama.developer.meta.com/docs/getting-started/pricing-rate-limits</a><br>
+        <a href="https://llama.developer.meta.com">llama.developer.meta.com</a> (landing)</p>
+      </td>
+      <td>
+        <p class="who">Microsoft. Failed.</p>
+        <p class="why">Hub returned 404. No MAI dollar.</p>
+        <p class="src"><a href="https://learn.microsoft.com/microsoft.ai">learn.microsoft.com/microsoft.ai</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div class="method">
+  <h2>How to read this tab</h2>
+  <p>Each row is one claim. The figure is large so it can be scanned. Also read as is the same claim in a second honest unit (street vs book, days to end of life, peak vs off-peak, or under vs over a length cliff). Clock holds the date window. Source is the first-party host and the live URL. Status does the confidence job.</p>
+  <p>This page does not invent doubling times, orders of magnitude per year, or interval estimates. Those are not in the haul. A quiet morning still ships the strip plus the last verified dollars, dated.</p>
+</div>
+
+
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">&copy; 2026 SmarterDev. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="../index.html#practices">Practices</a></li>
+        <li><a href="../index.html#results">Track Record</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="/by-the-numbers/">By The Numbers</a></li>
+        <li><a href="../articles.html">Articles</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
